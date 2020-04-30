@@ -1,0 +1,145 @@
+.wrapper {
+  padding-top: 16px;
+
+  &:not(:last-child){
+    margin-bottom: 16px;
+  }
+}
+
+.component {
+  width: 100%;
+  display: table;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: inherit;
+  line-height: inherit;
+
+  tr {
+    color: inherit;
+    display: table-row;
+    outline: 0;
+    vertical-align: middle;
+
+    &:first-child {
+      td, th {
+        &:first-child {
+          border-top-left-radius: 2px;
+        }
+
+        &:last-child {
+          border-top-right-radius: 2px;
+        }
+      }
+    }
+
+    &:last-child {
+      td, th {
+        &:first-child {
+          border-bottom-left-radius: 2px;
+        }
+
+        &:last-child {
+          border-bottom-right-radius: 2px;
+        }
+      }
+    }
+  }
+
+  td, th {
+    padding: 8px 17px 9px;
+    display: table-cell;
+    background-color: #ffffff;
+    position: relative;
+
+    &:nth-child(1){
+      min-width: 92px;
+
+      @media only screen and (max-width: 767px) {
+        min-width: unset;
+      }
+    }
+
+    &:nth-child(2){
+      min-width: 118px;
+
+      @media only screen and (max-width: 767px) {
+        min-width: unset;
+      }
+    }
+
+    &::after {
+      content: '';
+      box-shadow: 0 1px 6px rgba(218, 218, 218, 0.25);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  td {
+    font-weight: 600;
+  }
+
+  th {
+    font-weight: 500;
+  }
+}
+
+.head {
+  display: table-header-group;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 10px;
+  }
+}
+
+.body {
+
+  tr {
+
+    &:first-child {
+      td {
+        padding-top: 21px;
+      }
+    }
+
+    &:last-child {
+      td {
+        border-bottom: 23px solid #ffffff;
+      }
+    }
+
+    td {
+      padding-top: 31px;
+      padding-bottom: 12px;
+      position: relative;
+
+      &:first-child {
+        &::before {
+          left: 8px;
+        }
+      }
+
+      &:last-child {
+        &::before {
+          right: 8px;
+        }
+      }
+
+      &::before {
+        content: '';
+        height: 1px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        background-color: #f1f1f1;
+      }
+    }
+  }
+}

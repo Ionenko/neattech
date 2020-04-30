@@ -1,0 +1,29 @@
+@import '../../../styles/abstracts/variables';
+
+.ordered {
+
+}
+
+.unordered {
+  margin: 0 0 26px;
+}
+
+.item {
+  color: $color-black-light;
+  position: relative;
+  padding-left: 27px;
+  line-height: 1.976rem;
+
+  & > [class^='icon'] {
+    color: $color-primary-light;
+    width: 13px;
+    line-height: 1px;
+    position: absolute;
+    left: 0;
+    top: 6px;
+  }
+
+  &:not(:last-child){
+    margin: 0 0 12px;
+  }
+}

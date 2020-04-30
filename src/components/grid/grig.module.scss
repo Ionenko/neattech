@@ -1,0 +1,29 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.container {
+  margin: 0 -11px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  padding: 11px 11px;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+
+  @for $i from 1 through 12 {
+    &--#{$i} {
+      @include make-col($i, 12);
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    @for $i from 1 through 12 {
+      &--#{$i} {
+        @include make-col(12, 12);
+      }
+    }
+  }
+}

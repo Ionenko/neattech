@@ -1,0 +1,9 @@
+.img {
+  display: block;
+  flex-shrink: 0;
+  line-height: 1;
+
+  & > svg {
+    max-width: 100%;
+  }
+}

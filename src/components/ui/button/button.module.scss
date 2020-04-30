@@ -1,0 +1,41 @@
+@import '../../../styles/abstracts/variables';
+
+%btn-default {
+  display: flex;
+  min-width: 150px;
+  border: 1px solid $color-primary-light;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  padding: 9px 10px;
+  justify-content: center;
+  transition: all .3s ease;
+  cursor: pointer;
+  margin: 0 0 19px;
+  font-weight: 700;
+  color: $color-primary-light;
+  background: transparent;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.btn {
+  @extend %btn-default;
+
+  &:link,
+  &:visited {
+    @extend %btn-default;
+  }
+
+  &:hover {
+    background: rgba(69, 149, 248, 0.08);
+    box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+  }
+
+  &:active {
+    background: rgba(69, 149, 248, 0.16);
+    box-shadow: 0 .5rem 1rem rgba(#000, 0.3);
+  }
+}

@@ -1,0 +1,58 @@
+@import '../../styles/abstracts/variables';
+
+.block {
+  background: $color-white;
+  box-shadow: 0 1px 6px rgba(218, 218, 218, 0.25);
+  border-radius: 10px;
+  min-height: 100%;
+
+  @media only screen and (max-width: 767px) {
+    margin-right: 69px;
+    min-height: unset;
+  }
+}
+
+.content {
+  padding: 16px 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &--center {
+    align-items: center;
+    text-align: center;
+  }
+
+  p {
+    margin: 0 0 19px;
+    line-height: 2rem;
+  }
+
+  [class='link'] {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    color: #B2B2B2;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.md {
+  min-height: 218px;
+
+  @media only screen and (max-width: 767px) {
+    min-height: 222px;
+  }
+}
+
+.lg {
+  min-height: 302px;
+
+  @media only screen and (max-width: 767px) {
+    min-height: 222px;
+  }
+}

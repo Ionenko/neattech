@@ -1,0 +1,42 @@
+@import '../styles/abstracts/variables';
+
+.container {
+  padding: 34px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1145px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 767px) {
+    padding: 29px 15px;
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 0 46px;
+  margin-right: 50px;
+
+  @media only screen and (max-width: 1366px) {
+    padding: 0 0;
+    margin-right: 24px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    flex: 0 0 100%;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  &-task2 {
+    font-family: 'Segoe UI', sans-serif;
+  }
+}
+
+.aside {
+  flex: 0 0 381px;
+
+  @media only screen and (max-width: 1200px) {
+    flex: 0 0 100%;
+  }
+}

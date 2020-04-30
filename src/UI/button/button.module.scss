@@ -1,0 +1,133 @@
+@import '../../styles/abstracts/variables';
+
+%btn-default {
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  padding: 1rem 1rem;
+  transition: all .3s ease;
+  cursor: pointer;
+  font-weight: 600;
+  min-width: 124px;
+  position: relative;
+}
+
+
+.primary {
+  &,
+  &:link,
+  &:visited {
+    @extend %btn-default;
+    background: #4595F8;
+    color: #ffffff;
+  }
+
+  &:hover {
+    background: #73B5FA;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px #2256B2;
+  }
+
+  &:active {
+    background: #3273D5;
+  }
+}
+
+.secondary {
+  &,
+  &:link,
+  &:visited {
+    @extend %btn-default;
+    background: #fff;
+    border: 1px solid #4595F8;
+    color: #4595F8;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  &:hover {
+    background: rgba(69, 149, 248, 0.08);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px #2256B2;
+  }
+
+  &:active {
+    background-color: rgba(69, 149, 248, 0.16);
+  }
+}
+
+.disabled, .loading {
+  &,
+  &:link,
+  &:visited {
+    background-color: #E0E0E0;
+    color: #BDBDBD;
+    border-color: rgba(143, 155, 179, 0.24);
+  }
+
+  &:hover {
+    background: #E0E0E0;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:active {
+    background: #E0E0E0;
+  }
+}
+
+.loading {
+  min-height: 40px;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.spinner {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+
+  div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    margin: 2px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+
+    &:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+    &:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+    &:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+  }
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

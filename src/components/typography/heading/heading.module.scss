@@ -1,0 +1,62 @@
+@import '../../../styles/abstracts/variables';
+
+.component {
+  color: $color-black-light;
+  font-weight: 700;
+
+  & > * {
+    font-size: inherit;
+    font-weight: inherit;
+    color: currentColor;
+    font-family: inherit;
+  }
+}
+
+.underline {
+  padding: 0 0 19px;
+  position: relative;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin: 0 0 14px;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 4px;
+    background-color: $color-primary-light;
+    width: 99px;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.lg {
+  font-size: 3.3rem;
+  line-height: 4rem;
+  margin: 0 0 26px;
+}
+
+.md {
+  font-size: 2.3rem;
+  line-height: 2.8rem;
+  margin: 0 0 16px;
+}
+
+.sm {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  margin: 0 0 18px;
+
+  &:first-child {
+    margin-top: 9px;
+  }
+}
+
+.primary-light {
+  color: $color-primary-light;
+}
+
+.center {
+  text-align: center;
+}

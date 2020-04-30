@@ -1,0 +1,62 @@
+@import '../../styles/abstracts/variables';
+
+.container {
+  padding-left: 295px;
+
+  @media only screen and (max-width: 992px) {
+    padding-left: 0;
+  }
+}
+
+.main {
+  padding: 0;
+  min-height: 100%;
+}
+
+.error {
+  background-color: $color-red;
+}
+
+.message {
+  border-radius: 10px;
+  min-height: 56px;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 20px;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-family: $font-family;
+  font-weight: 500;
+
+  [class^='icon'] {
+    width: 15px;
+    line-height: 1;
+    display: inline-block;
+  }
+
+  [class*='close-button'] {
+    align-self: center;
+    font-size: 1.8rem;
+    font-weight: 100;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    min-height: 45px;
+    padding-left: 12px;
+
+    [class^='icon'] {
+      width: 12px;
+    }
+  }
+}
+
+.body {
+  display: flex;
+  align-items: center;
+
+  [class^='icon'] {
+    margin-right: 18px;
+  }
+}
